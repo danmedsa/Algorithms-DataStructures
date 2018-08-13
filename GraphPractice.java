@@ -59,7 +59,7 @@ class Graph {
         }
 
         root.visited = true;
-        out.print(root.data);
+        out.println(root.data);
 
         for (GraphNode node : root.child) {
             if (!node.visited) {
@@ -75,7 +75,7 @@ class Graph {
 
         while (!queue.isEmpty()) {
             GraphNode curr = queue.removeFirst();
-            out.print(curr.data);
+            out.println(curr.data);
             for (GraphNode node : curr.child) {
                 if (node.visited == false) {
                     node.visited = true;

@@ -36,6 +36,17 @@ class Tree {
         appendChildren(nodeRight, depth - 1);
     }
 
+    public static void preOrderTraverse(TreeNode root){
+        if (root == null) {
+            return;
+        }
+        out.print("Visiting: " + root.data);
+        preOrderTraverse(root.left);
+        out.print(" - Left: " + root.left.data);
+        preOrderTraverse(root.right);
+        out.println(" - Right: " + root.right.data);
+    }
+
 }
 
 class TreeNode {
@@ -48,16 +59,6 @@ class TreeNode {
         this.data = newData;
         out.println("--- New Node: " + this.data);
 
-    }
-
-    public static void preOrderTraverse(TreeNode root){
-        if (root == null) {
-            return;
-        }
-
-        out.print(root.data);
-        preOrderTraverse(root.left);
-        preOrderTraverse(root.right);
     }
 }
 
