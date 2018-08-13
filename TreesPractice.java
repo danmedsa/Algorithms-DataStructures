@@ -29,7 +29,7 @@ class Tree {
 
         parent.left = nodeLeft;
         parent.right = nodeRight;
-        out.println("--- Node: " + parent.data + " - Left: " + parent.left.data + " - Right: " + parent.right.data);
+        parent.prettyPrint();
         appendChildren(nodeLeft, depth - 1);
         appendChildren(nodeRight, depth - 1);
     }
