@@ -29,7 +29,8 @@ class Tree {
 
         parent.left = nodeLeft;
         parent.right = nodeRight;
-        parent.prettyPrint();
+
+        parent.visit();
         appendChildren(nodeLeft, depth - 1);
         appendChildren(nodeRight, depth - 1);
     }
@@ -38,13 +39,21 @@ class Tree {
         if (root == null) {
             return;
         }
-        root.prettyPrint();
+        root.visit();
         preOrderTraverse(root.left);
         preOrderTraverse(root.right);
 
     }
 
+    public static boolean binarySearch(TreeNode root, int value) {
+        if (root == null) {
+            return false;
+        }
+
+        return root.data == value || binarySearch(root.left, value) || binarySearch(root.right, value);
+    }
 }
+
 
 class TreeNode {
     int data;
@@ -57,7 +66,7 @@ class TreeNode {
         out.println("--- New Node: " + this.data);
     }
 
-    public void prettyPrint(){
+    public void visit(){
         out.print("Visiting: ");
 
         if (this != null) {

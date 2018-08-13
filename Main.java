@@ -14,6 +14,11 @@ public class Main {
         // Trees
         Tree tree = new Tree();
         tree.generateBinaryTree(3);
+
+        out.println("--- Binary Search on Tree ---");
+        int value = 5;
+        out.println(Tree.binarySearch(tree.root, value) ? "Found: " + value : value + "Not Found");
+
         out.println("--- Pre-Order Traverse ---");
         Tree.preOrderTraverse(tree.root);
 
@@ -22,6 +27,7 @@ public class Main {
         Graph graph = new Graph();
         out.println("--- Depth First Search ---");
         Graph.depthFirstSearch(graph.root);
+
         graph = new Graph();
         out.println("--- Breath First Search ---");
         Graph.breathFirstSearch(graph.root);
@@ -34,11 +40,14 @@ public class Main {
 
         // Sorting
         SortingPractice sortArr = new SortingPractice();
+
         QuickSort quickSorted = new QuickSort(sortArr.data);
+
         MergeSort mergeSorted = new MergeSort(sortArr.data);
 
         // String Manipulation
         StringManipulation str = new StringManipulation("arr");
+
         out.print(StringManipulation.isPalindrome(""));
 
     }
