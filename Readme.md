@@ -10,34 +10,34 @@ Shows how to use the Classes and Functions Implemented.
 
 ### TreesPractice.java
 Implementation of:
-- Tree:
--- generateBinaryTree(depth)
--- preOrderTraverse(root)
--- binarySearch(root, value)
+* Tree:
+  * ```generateBinaryTree(depth)```
+  * ```preOrderTraverse(root)```
+  * ```binarySearch(root, value)```
 
-- Tree Node:
--- visit()
+* Tree Node:
+  * ```visit()```
 
 ### GraphPractice.java
 Implementation of:
-- Graph:
--- depthFirstSearch(root);
---breathFirstSearch(root);
+* Graph:
+  * ```depthFirstSearch(root);```
+  * ```breathFirstSearch(root);```
 
-- GraphNode
+* GraphNode
 
 ### HashMapsPractice.java
-- HashMap:
--- populateHashMap()
+* HashMap:
+  * ```populateHashMap()```
 
 ### SortingPractice.java
-- Merge Sort:
--- mergeSort(array)
+* Merge Sort:
+  * ```mergeSort(array)```
 
-- Quick Sort:
--- quickSort(array)
+* Quick Sort:
+  * ```quickSort(array)```
 
 ### StringManipulation.java
-- StringManipulation:
--- traverseChars()
--- isPalindrome(string)
+* StringManipulation:
+  * ```traverseChars()```
+  * ```isPalindrome(string)```
