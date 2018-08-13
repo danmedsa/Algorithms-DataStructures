@@ -13,11 +13,9 @@ class Tree {
         this.root = new TreeNode();
     }
 
-    public TreeNode generateBinaryTree(int depth) {
+    public void generateBinaryTree(int depth) {
         out.println("--- Generating Binary Tree ---");
-        TreeNode root = new TreeNode();
-        appendChildren(root, depth);
-        return root;
+        appendChildren(this.root, depth);
     }
 
     private void appendChildren(TreeNode parent, int depth){
@@ -40,11 +38,10 @@ class Tree {
         if (root == null) {
             return;
         }
-        out.print("Visiting: " + root.data);
+        root.prettyPrint();
         preOrderTraverse(root.left);
-        out.print(" - Left: " + root.left.data);
         preOrderTraverse(root.right);
-        out.println(" - Right: " + root.right.data);
+
     }
 
 }
@@ -58,7 +55,27 @@ class TreeNode {
         int newData = abs((new Random()).nextInt() % 10);
         this.data = newData;
         out.println("--- New Node: " + this.data);
+    }
 
+    public void prettyPrint(){
+        out.print("Visiting: ");
+
+        if (this != null) {
+            out.print(this.data + " |");
+
+            if (this.left != null) {
+                out.print(" Left - " + this.left.data);
+            } else {
+                out.print(" Left - (null)");
+            }
+
+            if (this.right != null) {
+                out.print(" Right - " + this.right.data);
+            } else {
+                out.print(" Right - (null)");
+            }
+            out.println();
+        }
     }
 }
 
